@@ -3,8 +3,8 @@ email: anntropea@gmail.com
 description: >-
   Baltimore doula support that grows with you. Birth doula services, childbirth education,
   and breastfeeding support.
-url: "https://mommytreedoula.github.io"
-baseurl: ""
+url: "https://anntropea-oss.github.io"
+baseurl: "/wixmigration"
 permalink: /post/:slug/
 markdown: kramdown
 

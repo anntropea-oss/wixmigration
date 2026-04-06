@@ -9,10 +9,10 @@ permalink: /blog/
   <div class="blog-list">
     {% for post in site.posts %}
       <article>
-        <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+        <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
         <p><strong>{{ post.date | date: "%B %-d, %Y" }}</strong> · {{ post.author }}</p>
         <p>{{ post.excerpt | strip_html | truncate: 200 }}</p>
-        <p><a href="{{ post.url }}">Read more</a></p>
+        <p><a href="{{ post.url | relative_url }}">Read more</a></p>
       </article>
     {% endfor %}
   </div>
