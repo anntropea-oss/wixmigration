@@ -1,0 +1,14 @@
+---
+layout: default
+---
+
+<section class="section">
+  <h2>{{ page.title }}</h2>
+  <p><strong>{{ page.date | date: "%B %-d, %Y" }}</strong> · {{ page.author }}</p>
+  {% if page.image %}
+    <img src="{{ page.image }}" alt="{{ page.title }}" style="border-radius:18px; margin: 16px 0;" />
+  {% endif %}
+  <div class="post-content">
+    {{ content }}
+  </div>
+</section>
