@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://anntropea-oss.github.io/wixmigration/sitemap.xml
+Sitemap: https://mommytreedoula.com/sitemap.xml
