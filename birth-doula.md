@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Birth Doula
-description: Birth doula support from certified birth doula Ann Tropea, CBD (CBI) at Mommy Tree.
+description: Birth doula support in Baltimore from Ann Tropea, CBD (CBI), including prenatal visits, birth planning, continuous labor support, and postpartum care.
 permalink: /birth-doula/
 ---
 

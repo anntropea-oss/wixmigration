@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Breastfeeding Counseling
-description: Breastfeeding support from a certified birth doula.
+description: Breastfeeding counseling from Mommy Tree, with support for positioning, milk supply, nipple or breast discomfort, education, and home or virtual visits.
 permalink: /breastfeeding-counseling/
 ---
 

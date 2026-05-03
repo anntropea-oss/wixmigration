@@ -1,7 +1,30 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
-<meta name="description" content="{{ page.description | default: site.description }}" />
+{% assign meta_title = site.title %}
+{% if page.title and page.title != "Home" %}
+  {% assign meta_title = page.title | append: " | " | append: site.title %}
+{% endif %}
+{% assign meta_description = page.description | default: site.description | strip %}
+{% assign canonical_url = page.url | replace: "index.html", "" | absolute_url %}
+{% assign share_image = page.image | default: site.share_image | absolute_url %}
+<title>{{ meta_title | escape }}</title>
+<meta name="description" content="{{ meta_description | escape }}" />
+{% if page.noindex %}
+<meta name="robots" content="noindex, nofollow" />
+{% endif %}
+<link rel="canonical" href="{{ canonical_url }}" />
+<meta property="og:site_name" content="{{ site.title | escape }}" />
+<meta property="og:title" content="{{ meta_title | escape }}" />
+<meta property="og:description" content="{{ meta_description | escape }}" />
+<meta property="og:url" content="{{ canonical_url }}" />
+<meta property="og:type" content="website" />
+<meta property="og:image" content="{{ share_image }}" />
+<meta property="og:image:width" content="1920" />
+<meta property="og:image:height" content="1080" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="{{ meta_title | escape }}" />
+<meta name="twitter:description" content="{{ meta_description | escape }}" />
+<meta name="twitter:image" content="{{ share_image }}" />
 <link rel="icon" href="{{ '/assets/images/icons/favicon.jpg' | relative_url }}" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

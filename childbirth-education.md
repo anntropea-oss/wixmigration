@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Childbirth Education
-description: Childbirth education courses at Mommy Tree.
+description: Childbirth education with Mommy Tree, offering interactive birth and labor classes for pregnant people, partners, and families in Baltimore and online.
 permalink: /childbirth-education/
 ---
 

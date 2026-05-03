@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Abortion Doula
-description: Comprehensive abortion doula support pre, post, and during at Mommy Tree.
+description: Abortion doula support from Mommy Tree, including procedure support, preparation, education, discussion, and compassionate care before, during, and after.
 permalink: /copy-of-birth-doula/
 ---
 

@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Upcoming Classes & Events
-description: Schedule of upcoming childbirth education classes.
+description: Upcoming childbirth education classes and community birth events from Mommy Tree in Baltimore.
 permalink: /upcoming-classes-events/
 ---
 
