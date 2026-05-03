@@ -5,7 +5,6 @@ description: >-
   and breastfeeding support.
 url: "https://mommytreedoula.com"
 baseurl: ""
-permalink: /post/:slug/
 markdown: kramdown
 
 # Build settings

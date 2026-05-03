@@ -243,14 +243,6 @@ li {
   background: var(--clay);
 }
 
-.blog-list article {
-  background: #fff;
-  border-radius: var(--radius);
-  padding: 20px;
-  box-shadow: var(--shadow);
-  margin-bottom: 20px;
-}
-
 .site-footer {
   background: var(--forest);
   color: #fff;
