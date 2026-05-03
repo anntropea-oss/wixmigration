@@ -6,7 +6,7 @@ description: >-
 url: "https://mommytreedoula.com"
 baseurl: ""
 share_image: "/assets/images/hero/hero.jpg"
-google_analytics_id: ""
+google_analytics_id: "G-559NCC68VP"
 markdown: kramdown
 
 # Build settings
