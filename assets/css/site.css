@@ -203,6 +203,43 @@ li {
   text-decoration: underline;
 }
 
+.eyebrow {
+  color: var(--clay);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.not-found {
+  max-width: 980px;
+}
+
+.not-found > p {
+  max-width: 720px;
+  line-height: 1.7;
+}
+
+.not-found-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin: 28px 0 36px;
+}
+
+.not-found-actions .cta {
+  background: var(--forest);
+  border-radius: 999px;
+  color: #fff;
+  display: inline-block;
+  font-weight: 600;
+  padding: 13px 22px;
+}
+
+.not-found-actions .cta.secondary {
+  background: var(--sage);
+  color: #0d2a1c;
+}
+
 .contact-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
