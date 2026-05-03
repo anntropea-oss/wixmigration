@@ -1,0 +1,127 @@
+{% assign page_title = meta_title | default: site.title %}
+{% assign page_description = meta_description | default: site.description | strip %}
+{% assign page_url = canonical_url | default: page.url | absolute_url %}
+{% assign image_url = share_image | default: site.share_image | absolute_url %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "{{ site.url }}/#website",
+      "url": "{{ site.url }}/",
+      "name": {{ site.title | jsonify }},
+      "description": {{ site.description | strip | jsonify }},
+      "publisher": {
+        "@id": "{{ site.url }}/#business"
+      },
+      "inLanguage": "en-US"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "{{ page_url }}#webpage",
+      "url": "{{ page_url }}",
+      "name": {{ page_title | jsonify }},
+      "description": {{ page_description | jsonify }},
+      "isPartOf": {
+        "@id": "{{ site.url }}/#website"
+      },
+      "about": {
+        "@id": "{{ site.url }}/#business"
+      },
+      "primaryImageOfPage": {
+        "@id": "{{ image_url }}#primaryimage"
+      },
+      "inLanguage": "en-US"
+    },
+    {
+      "@type": "ImageObject",
+      "@id": "{{ image_url }}#primaryimage",
+      "url": "{{ image_url }}",
+      "contentUrl": "{{ image_url }}",
+      "width": 1920,
+      "height": 1080
+    },
+    {
+      "@type": "Person",
+      "@id": "{{ site.url }}/#ann-tropea",
+      "name": "Ann Tropea",
+      "jobTitle": "Certified Birth Doula",
+      "worksFor": {
+        "@id": "{{ site.url }}/#business"
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "@id": "{{ site.url }}/#business",
+      "name": {{ site.title | jsonify }},
+      "url": "{{ site.url }}/",
+      "description": {{ site.description | strip | jsonify }},
+      "image": "{{ image_url }}",
+      "telephone": "+1-443-903-5016",
+      "email": {{ site.email | jsonify }},
+      "founder": {
+        "@id": "{{ site.url }}/#ann-tropea"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Baltimore",
+        "addressRegion": "MD",
+        "addressCountry": "US"
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Baltimore"
+        },
+        {
+          "@type": "State",
+          "name": "Maryland"
+        }
+      ],
+      "sameAs": [
+        "https://www.facebook.com/mommytreedoula",
+        "https://www.instagram.com/mommytreedoula"
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Mommy Tree services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Birth Doula",
+              "url": "{{ site.url }}/birth-doula/"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Abortion Doula",
+              "url": "{{ site.url }}/copy-of-birth-doula/"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Childbirth Education",
+              "url": "{{ site.url }}/childbirth-education/"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Breastfeeding Counseling",
+              "url": "{{ site.url }}/breastfeeding-counseling/"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}
+</script>
