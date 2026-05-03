@@ -10,7 +10,3 @@ original_url: "https://www.mommytreedoula.com/post/pumpkin-spice-banana-bread"
 ---
 
 This quick bread is loaded with pumpkin and sweetened with banana.
-
-Full post content will be added shortly.
-
-Original link: https://www.mommytreedoula.com/post/pumpkin-spice-banana-bread

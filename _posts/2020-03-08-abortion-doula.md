@@ -12,7 +12,3 @@ original_url: "https://www.mommytreedoula.com/post/abortion-doula"
 ---
 
 Abortion needs to be normalized, talked about, and acknowledged so that we can empower women to seek support.
-
-Full post content will be added shortly.
-
-Original link: https://www.mommytreedoula.com/post/abortion-doula

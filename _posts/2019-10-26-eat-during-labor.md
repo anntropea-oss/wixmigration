@@ -10,7 +10,3 @@ original_url: "https://www.mommytreedoula.com/post/eat-during-labor"
 ---
 
 Spoiler alert - YES! There is a crazy, and I mean CRAZY, rumor out there that women are not supposed to eat solid food during labor. This...
-
-Full post content will be added shortly.
-
-Original link: https://www.mommytreedoula.com/post/eat-during-labor

@@ -10,7 +10,3 @@ original_url: "https://www.mommytreedoula.com/post/the-year-of-the-plant-based-d
 ---
 
 It is finally time to embrace this lifestyle diet we've all heard so much about?
-
-Full post content will be added shortly.
-
-Original link: https://www.mommytreedoula.com/post/the-year-of-the-plant-based-diet

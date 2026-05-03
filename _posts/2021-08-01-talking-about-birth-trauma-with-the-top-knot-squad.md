@@ -8,7 +8,3 @@ original_url: "https://www.mommytreedoula.com/post/talking-about-birth-trauma-wi
 ---
 
 Listen to the episode below, where I talk about birth, consent, and holding space for trauma.
-
-Full post content will be added shortly.
-
-Original link: https://www.mommytreedoula.com/post/talking-about-birth-trauma-with-the-top-knot-squad
