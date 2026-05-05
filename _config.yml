@@ -11,3 +11,5 @@ markdown: kramdown
 
 # Build settings
 plugins: []
+exclude:
+  - SOLUTIONS.md
