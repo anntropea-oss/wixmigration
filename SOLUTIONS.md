@@ -61,3 +61,11 @@
 - Files Changed: `mommytreedoula.github.io/_config.yml`, `mommytreedoula.github.io/SOLUTIONS.md`
 - Status: Resolved
 - Verification: Ran `/opt/homebrew/opt/ruby@3.4/bin/bundle exec jekyll build`, then checked `_site` and confirmed no `SOLUTIONS` files are generated.
+
+## [2026-05-05 13:05] Configured Repository Git Identity
+- Problem: Git auto-derived the committer identity as `Ann Tropea <atropea@Ann-Tropeas-MacBook-Pro-1455.local>` because no user name or email was configured.
+- Root Cause: The repository and global Git config did not have `user.name` or `user.email` set.
+- Solution: Set the repository-local Git identity to `Ann Tropea <anntropea@gmail.com>`.
+- Files Changed: `.git/config`, `SOLUTIONS.md`
+- Status: Resolved
+- Verification: Ran `git config --get user.name` and `git config --get user.email`, confirming `Ann Tropea` and `anntropea@gmail.com`.
