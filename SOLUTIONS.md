@@ -133,3 +133,11 @@
 - Files Changed: `SOLUTIONS.md`
 - Status: Resolved
 - Verification: Ran `/opt/homebrew/opt/ruby@3.4/bin/bundle exec jekyll clean && /opt/homebrew/opt/ruby@3.4/bin/bundle exec jekyll build`, then confirmed `_site/index.html` contains `Hampden`.
+
+## [2026-05-06 13:35] Added Ann Tropea Headshot
+- Problem: The Meet Ann section introduced Ann Tropea without showing the provided headshot, reducing personal context on the homepage.
+- Root Cause: The migrated homepage did not include a local profile image asset for the bio block.
+- Solution: Copied the provided headshot into site assets, added it to the Meet Ann intro card with alt text, and added responsive profile image styling.
+- Files Changed: `assets/images/about/ann-tropea-headshot.jpg`, `index.html`, `assets/css/site.css`, `SOLUTIONS.md`
+- Status: Resolved
+- Verification: Ran a clean Jekyll build and confirmed generated `_site/index.html` references `/assets/images/about/ann-tropea-headshot.jpg`.

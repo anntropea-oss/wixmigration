@@ -184,6 +184,23 @@ li {
   color: var(--forest);
 }
 
+.profile-card {
+  align-items: start;
+  display: grid;
+  gap: 22px;
+  grid-template-columns: minmax(150px, 0.65fr) minmax(0, 1fr);
+}
+
+.profile-photo {
+  aspect-ratio: 4 / 5;
+  border-radius: calc(var(--radius) * 0.8);
+  box-shadow: 0 16px 28px rgba(27, 42, 33, 0.16);
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  width: 100%;
+}
+
 .callout {
   background: linear-gradient(120deg, var(--mist), #fff);
   border-radius: var(--radius);
@@ -322,5 +339,11 @@ li {
   }
   .nav-links {
     font-size: 14px;
+  }
+  .profile-card {
+    grid-template-columns: 1fr;
+  }
+  .profile-photo {
+    max-height: 520px;
   }
 }
