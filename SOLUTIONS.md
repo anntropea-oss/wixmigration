@@ -109,3 +109,11 @@
 - Files Changed: `SOLUTIONS.md`
 - Status: Open
 - Verification: Reviewed `index.html` and confirmed the form action uses the Formspree endpoint rather than a local email address.
+
+## [2026-05-06 13:30] Formspree Recipient Verified
+- Problem: The contact form recipient was unknown because delivery is controlled by the external Formspree endpoint.
+- Root Cause: Static site code only shows the Formspree endpoint, not the destination inbox.
+- Solution: Sent a test form submission and confirmed it delivered to `anntropea@gmail.com`.
+- Files Changed: `SOLUTIONS.md`
+- Status: Resolved
+- Verification: User confirmed the test email arrived in their personal Gmail account.
