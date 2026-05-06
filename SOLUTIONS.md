@@ -117,3 +117,19 @@
 - Files Changed: `SOLUTIONS.md`
 - Status: Resolved
 - Verification: User confirmed the test email arrived in their personal Gmail account.
+
+## [2026-05-06 13:32] Updated Displayed Neighborhood Address
+- Problem: The homepage contact address listed `Hamilton`, but the displayed address should be `Hampden, Baltimore City, MD`.
+- Root Cause: Existing migrated contact copy had the old neighborhood value.
+- Solution: Updated the homepage contact address from `Hamilton` to `Hampden`.
+- Files Changed: `index.html`, `SOLUTIONS.md`
+- Status: Resolved
+- Verification: Ran `bundle exec jekyll clean` followed by `bundle exec jekyll build`; confirmed both `index.html` and `_site/index.html` use `Hampden`.
+
+## [2026-05-06 13:32] Clean Rebuild Needed For Address Verification
+- Problem: After the first build check, source `index.html` showed `Hampden` but generated `_site/index.html` still showed the old `Hamilton` value.
+- Root Cause: Stale generated `_site` output from a prior build.
+- Solution: Ran a Jekyll clean before rebuilding the site.
+- Files Changed: `SOLUTIONS.md`
+- Status: Resolved
+- Verification: Ran `/opt/homebrew/opt/ruby@3.4/bin/bundle exec jekyll clean && /opt/homebrew/opt/ruby@3.4/bin/bundle exec jekyll build`, then confirmed `_site/index.html` contains `Hampden`.
