@@ -69,3 +69,43 @@
 - Files Changed: `.git/config`, `SOLUTIONS.md`
 - Status: Resolved
 - Verification: Ran `git config --get user.name` and `git config --get user.email`, confirming `Ann Tropea` and `anntropea@gmail.com`.
+
+## [2026-05-05 13:07] Cloudflare Nameserver Update Pending
+- Problem: Cloudflare sent an action-required email stating `mommytreedoula.com` is not using Cloudflare nameservers. Public DNS currently still reports Wix nameservers.
+- Root Cause: The domain registrar is still delegated to `ns14.wixdns.net` and `ns15.wixdns.net` instead of Cloudflare's assigned nameservers.
+- Solution: No DNS change applied from this workspace; registrar nameservers still need to be updated if Cloudflare should manage DNS.
+- Files Changed: `SOLUTIONS.md`
+- Status: Open
+- Verification: Read the Cloudflare email PDF and ran `dig +short NS mommytreedoula.com`, confirming `ns14.wixdns.net` and `ns15.wixdns.net`.
+
+## [2026-05-05 13:10] Email Authentication TXT Records Not Found
+- Problem: Public DNS and the Cloudflare DNS screenshot show Google MX and site verification records, but no SPF, DKIM, or DMARC TXT records were found for `mommytreedoula.com`.
+- Root Cause: Unknown; the records may never have been configured in Wix DNS or may exist under selector names not checked.
+- Solution: No DNS change applied from this workspace; before changing nameservers, verify Google Workspace/Gmail email authentication requirements and add any missing TXT records to Cloudflare.
+- Files Changed: `SOLUTIONS.md`
+- Status: Open
+- Verification: Ran `dig +short TXT mommytreedoula.com`, `dig +short TXT google._domainkey.mommytreedoula.com`, and `dig +short TXT _dmarc.mommytreedoula.com`; only the Google site verification TXT was returned.
+
+## [2026-05-05 13:20] Google Workspace Admin Access Blocked
+- Problem: Google Workspace DKIM setup cannot proceed because the admin console login is not currently accessible.
+- Root Cause: Unknown; the domain may have a separate Workspace admin account, a reseller-managed account, or only Google mail records without available admin credentials.
+- Solution: No DNS or Google Admin change applied yet; recover or identify the Workspace administrator before generating the DKIM key.
+- Files Changed: `SOLUTIONS.md`
+- Status: Open
+- Verification: User reported they cannot log in to Google Workspace while attempting DKIM setup.
+
+## [2026-05-06 13:28] Contact Email Source Consolidated
+- Problem: The homepage contact email was hard-coded, while footer and structured data used the shared `site.email` value. Future email changes could drift between locations.
+- Root Cause: Homepage contact markup did not use the Jekyll site configuration value.
+- Solution: Updated the homepage mailto link and visible email text to use `{{ site.email }}`.
+- Files Changed: `index.html`, `SOLUTIONS.md`
+- Status: Resolved
+- Verification: Confirmed `_config.yml` sets `email: anntropea@gmail.com` and ran a Jekyll build successfully.
+
+## [2026-05-06 13:28] Formspree Recipient Not Verified
+- Problem: The visible contact email is `anntropea@gmail.com`, but the contact form submits to a Formspree endpoint whose recipient cannot be confirmed from the static site code.
+- Root Cause: Form delivery is controlled by the external Formspree project at `https://formspree.io/f/mreojzev`.
+- Solution: No endpoint change applied; verify the recipient in Formspree or send a test submission after deployment.
+- Files Changed: `SOLUTIONS.md`
+- Status: Open
+- Verification: Reviewed `index.html` and confirmed the form action uses the Formspree endpoint rather than a local email address.
